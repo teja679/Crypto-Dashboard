@@ -4,15 +4,18 @@ import iphone from '../../../assets/iphone.png'
 import Button from '../../mui_components/Button/Button'
 import './styles.css'
 import { RWebShare } from "react-web-share";
+import { motion } from 'framer-motion'
 
 const LandingPage = () => {
   return (
     <div className='landing-page'>
       <div className='headings-div'>
-        <h1 className='headings'>
+        <motion.h1 
+        initial={{ opacity: 0, y: 50}} transition={{ type: 'spring', duration: 1 }}
+        animate={{ opacity: 1, y: 0}} className='headings'>
           <span className='stroke'>Crypto Tracker</span> <br />
           <span className='heading-blue'>Real Time.</span>
-        </h1>
+        </motion.h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ratione.</p>
         <div className='btn-div'>
           <a href='/dashboard'>
@@ -32,7 +35,13 @@ const LandingPage = () => {
       </div>
       <div className='image-div'>
         <img src={gradient} alt='gradient' className='gradient' />
-        <img src={iphone} alt='phone' className='phone' />
+        <motion.img src={iphone} alt='phone' className='phone'
+         initial={{ y: -50}} animate={{ y: 0}}  transition={{
+          type: "smooth",
+          repeatType: "mirror",
+          duration: 2,
+          repeat: Infinity,
+        }}></motion.img>
       </div>
     </div>
   )
