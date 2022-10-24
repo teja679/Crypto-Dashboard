@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../../mui_components/Button/Button'
 import './styles.css'
+import TemporaryDrawer from './Drawer';
 
 const Header = () => {
   return (
@@ -23,6 +24,9 @@ const Header = () => {
                     <Button text={'Dashboard'} className={'button'} />
                 </p>
             </a>
+        </div>
+        <div className='menu-div'>
+            <TemporaryDrawer />
         </div>
     </div>
   )

@@ -13,3 +13,30 @@
     gap: 2rem;
     justify-content: space-evenly;
 }
+
+
+/* -----Drawer--------- */
+
+.drawer-div {
+    width: 40vw;
+    height: 100%;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    background-color: var(--darkgrey);
+}
+.menu-div {
+    display: none;
+}
+/* ---------responsive-------- */
+
+@media only screen and (max-width: 800px) {
+    .links-div {
+        display: none;
+    }
+    .menu-div {
+        display: block;
+    }
+    .drawer-div{
+        font-size: 1rem;
+    }
+}   
