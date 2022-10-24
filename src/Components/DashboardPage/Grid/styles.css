@@ -1,0 +1,52 @@
+.coin-box {
+    background-color: var(--lightGreen);
+    color: var(--white);
+    width: 250px;
+    height: 250px;
+    margin: 1rem 2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+.box-red{
+    background-color: var(--lightRed);
+    width: 250px;
+    height: 250px;
+    margin: 1rem 2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+.logo-div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.coin-info .symbol {
+    text-transform: uppercase;
+}
+.coin-info .name {
+    text-transform: capitalize;
+}
+.chip-flex {
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.chip {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    color: var(--white);
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+.red {
+    color: var(--red);
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+.logo {
+    width: 3rem;
+    height: 3rem;
+}

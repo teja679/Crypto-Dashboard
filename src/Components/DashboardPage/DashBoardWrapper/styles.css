@@ -1,0 +1,10 @@
+.tabs-wrapper {
+    font-family: 'Inter';
+}
+.grid-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin: 1rem 2rem; */
+}

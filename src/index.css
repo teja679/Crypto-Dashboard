@@ -15,11 +15,13 @@ code {
 :root {
   --blue: #3a80e9;
   --white: #fff;
-  --black: #1a1a1f;
+  --black: #222;
   --grey: #888;
   --darkgrey: #1b1b1b;
   --green: #61c96f;
   --red: #f94141;
+  --lightGreen: #a7f0a7;
+  --lightRed: #ec9a9a;
 }
 html {
   scroll-behavior: smooth;
