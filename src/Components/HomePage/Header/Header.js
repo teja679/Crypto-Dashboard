@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../../mui_components/Button/Button'
 import './styles.css'
 
 const Header = () => {
@@ -18,7 +19,9 @@ const Header = () => {
                 <p className='link'>About Us</p>
             </a>
             <a href='/dashboard'>
-                <p className='link'>Dashboard</p>
+                <p className='link'>
+                    <Button text={'Dashboard'} className={'button'} />
+                </p>
             </a>
         </div>
     </div>
