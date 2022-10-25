@@ -51,7 +51,7 @@ export const SelectCoins = ({
             value={crypto2} handleChange={handleChange2}
             data={data} filter={crypto1} />
         </div>
-        <div className='text-select'>
+        <div className='text-select inverse'>
             <SelectDays days={days} handleChange={handleChange3} />
         </div>
     </div>

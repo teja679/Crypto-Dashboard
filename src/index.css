@@ -9,6 +9,16 @@
   --green: #61c96f;
   --red: #f94141;
 }
+/* 
+:root {
+  --blue: #3a80e9;
+  --white: #111;
+  --black: #e9e9e9;
+  --darkgrey: #bcbcbc;
+  --grey: #1b1b1b;
+  --green: #61c96f;
+  --red: #f94141;
+} */
 
 [data-theme="light"] {
   --white: #ffffff;
@@ -190,7 +200,12 @@ td {
     margin: 0.8rem 1.5rem;
     border-radius: 0.8rem;
   }
-
+  .line-page-div {
+    padding: 0 1rem;
+    margin: 0.5rem 1.5rem;
+    background-color: var(--darkgrey);
+    border-radius: 1rem;
+  }
   .description h2 {
     margin-top: 0;
     margin-bottom: 0.8rem;
