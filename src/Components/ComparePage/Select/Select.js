@@ -11,7 +11,7 @@ export const SelectComponent = ({
             onChange={handleChange}
             className="select-days"
             sx={{
-                height:'2.5rem', color: "var(--white",
+                height:'2.5rem', color: "var(--white)",
                 "& .MuiOutlinedInput-notchedOutline": {
                     borderColor: "var(--white)",
                   },
@@ -26,7 +26,7 @@ export const SelectComponent = ({
             }}
         >
             {data
-            .filter((coin) => coin.id != filter)
+            // .filter((coin) => coin.id != filter)
             .map((item, i) => (
                 <MenuItem key={i} value={item.id}>
                     {item.name}

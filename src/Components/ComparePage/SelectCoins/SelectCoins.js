@@ -42,13 +42,13 @@ export const SelectCoins = ({
         <div className='text-select'>
             <p>Crypto 1</p>
             <SelectComponent
-            value={crypto1} handle={handleChange1}
+            value={crypto1} handleChange={handleChange1}
             data={data} filter={crypto2} />
         </div>
         <div className='text-select'>
             <p>Crypto 2</p>
             <SelectComponent
-            value={crypto2} handle={handleChange2}
+            value={crypto2} handleChange={handleChange2}
             data={data} filter={crypto1} />
         </div>
         <div className='text-select'>

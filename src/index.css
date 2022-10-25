@@ -96,7 +96,12 @@ td {
   background-color: var(--darkgrey);
   border-radius: 1rem;
 }
-
+.line-page-div {
+  padding: 0 1rem;
+  margin: 1rem 3rem;
+  background-color: var(--darkgrey);
+  border-radius: 1rem;
+}
 .description a {
   text-decoration: underline;
 }
@@ -138,7 +143,7 @@ td {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 2rem 0rem;
+  margin: 0.5rem 0rem;
 }
 
 .cursor {
