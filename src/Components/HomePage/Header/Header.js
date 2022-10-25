@@ -16,7 +16,7 @@ const Header = () => {
     }
     const storedTheme = localStorage.getItem("theme");
     
-    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark").matches
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: light").matches
     
     const defaultDark =
     storedTheme === "dark" || (storedTheme === null && prefersDark);
@@ -50,16 +50,16 @@ const Header = () => {
                     onClick={() => toggleTheme()}
                 />
                 <a href='/'>
-                    <p className='link'>Home</p>
+                    <p className='links'>Home</p>
                 </a>
                 <a href='/compare'>
-                    <p className='link'>Compare</p>
+                    <p className='links'>Compare</p>
                 </a>
                 <a href='/about'>
-                    <p className='link'>About Us</p>
+                    <p className='links'>About Us</p>
                 </a>
                 <a href='/dashboard'>
-                    <p className='link'>
+                    <p className='links'>
                         <Button text={'Dashboard'} className={'button'} />
                     </p>
                 </a>

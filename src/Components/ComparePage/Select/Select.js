@@ -26,7 +26,7 @@ export const SelectComponent = ({
             }}
         >
             {data
-            // .filter((coin) => coin.id != filter)
+            .filter((coin) => coin.id != filter)
             .map((item, i) => (
                 <MenuItem key={i} value={item.id}>
                     {item.name}

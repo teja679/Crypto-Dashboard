@@ -12,9 +12,9 @@
   }
   
   .coin-box:hover {
-    
-    box-shadow: 4px 4px 1px var(--grey) !important;
-    transform: scale(1.02) !important;
+    box-shadow: 5px 5px 1px var(--green);
+    border: 1px solid var(--green);
+    transform: scale(1.05) !important;
     transition: all 0.3s;
   }
   
@@ -32,8 +32,9 @@
   }
   
   .box-red:hover {
-    transform: scale(1.02) !important;
-    border: 2px solid var(--red);
+    box-shadow: 5px 5px 1px var(--red);
+    border: 1px solid var(--red);
+    transform: scale(1.05) !important;
     transition: all 0.3s;
   }
   

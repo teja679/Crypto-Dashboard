@@ -23,7 +23,7 @@ function List({ coin, delay }) {
   return (
     <a href={`/coin?${coin.id}`}>
       <motion.tr
-        className="list-wrapper"
+        className={`${coin.price_change_percentage_24h > 0 ? "list-wrapper" : "list-wrapper-red"}`}
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
