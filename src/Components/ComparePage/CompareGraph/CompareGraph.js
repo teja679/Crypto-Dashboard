@@ -7,7 +7,7 @@ import ColorToggleButton from '../../mui_components/Toggle/Toggle'
 
 export const CompareGraph = ({ crypto1, crypto2, days, type, setType }) => {
     const [prices1, setPrices1] = useState([]);
-  const [prices2, setPrices2] = useState([]);
+      const [prices2, setPrices2] = useState([]);
 
   const today = new Date();
   const priorDate = new Date(new Date().setDate(today.getDate() - days));
@@ -89,6 +89,7 @@ export const CompareGraph = ({ crypto1, crypto2, days, type, setType }) => {
   useEffect(() => {
     getData();
   }, [crypto1, crypto2, days]);
+  
   const getData = async () => {
     const prices_data1 = await getPrices(crypto1, days, type);
     setPrices1(prices_data1);

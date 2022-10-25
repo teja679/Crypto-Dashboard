@@ -127,17 +127,17 @@ function CoinPage() {
     const prices_data = await getPrices(data.id, event.target.value, type);
     setPrices(prices_data);
     const priorDate = getPriorDate(event.target.value);
-    console.log('priordate >>', priorDate)
-    console.log('today >>', today)
+    // console.log('priordate >>', priorDate)
+    // console.log('today >>', today)
     var dates = getDaysArray(priorDate, today);
-    // setChartData({
-    //   labels: dates,
-    //   datasets: [
-    //     {
-    //       data: prices_data?.map((data) => data[1]),
-    //     },
-    //   ],
-    // });
+    setChartData({
+      labels: dates,
+      datasets: [
+        {
+          data: prices_data?.map((data) => data[1]),
+        },
+      ],
+    });
   };
 
   return (

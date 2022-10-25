@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const convertNumbers = ({ number }) => {
+export const convertNumbers = ( number ) => {
   if(number){
     if(number >= 1000000000){
         return number.toString().slice(0,-9) + '.' + number.toString().slice(-9, -7) + 'B'; 

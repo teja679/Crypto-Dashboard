@@ -14,7 +14,7 @@ export const getPrices = async (id, days, type) => {
     console.log("No price data");
     return;
   }
-
+  console.log(prices_data.data.market_caps)
   if (type == "market_caps") return prices_data.data.market_caps;
   else if (type == "total_volumes") return prices_data.data.total_volumes;
   else return prices_data.data.prices;
