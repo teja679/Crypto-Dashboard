@@ -1,17 +1,26 @@
-import React from 'react'
+import axios from 'axios'
+import { COIN_GECKO_URL } from '../../Constants'
 
-export const getCoinData = (id, slice) => {
-  return (
-    <div>
-        const API_URL 
-        axios.get(API_URL, {crossDomain: true}).then((res) => {
-            if(res.data){
-                // console.log(res.data)
-                setData(res.data)
-            } else{
-                console.log('error')
-            }
-        })
-    </div>
-  )
-}
+export const getCoinData = async (id, slice) => {
+  console.log("hiii");
+  const API_URL = COIN_GECKO_URL + `${id}`;
+  console.log("api url", API_URL);
+  var response_data;
+  if (slice) {
+    response_data = await axios.get(API_URL.slice(0, -1), {
+      crossDomain: true,
+    });
+  } else {
+    response_data = await axios.get(API_URL, {
+      crossDomain: true,
+    });
+  }
+
+  console.log("response data", response_data);
+
+  if (!response_data) {
+    console.log("No data");
+    return;
+  }
+  return response_data.data;
+};
