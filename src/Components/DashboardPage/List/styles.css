@@ -4,8 +4,11 @@
   align-items: center;
   width: 100%;
   gap: 1rem;
+  margin: 0;
   border-radius: 1rem;
   padding: 0rem 1rem;
+  margin-top: 0.5rem;
+  background-color: var(--darkgrey);
 }
 
 .list-wrapper:hover {
@@ -22,6 +25,8 @@
   gap: 1rem;
   border-radius: 1rem;
   padding: 0rem 1rem;
+  margin-top: 0.5rem;
+  background-color: var(--darkgrey);
 }
 
 .list-wrapper-red:hover {

@@ -22,13 +22,12 @@ const Header = () => {
     storedTheme === "dark" || (storedTheme === null && prefersDark);
 
     const [darkTheme, setDarkTheme] = useState(
-        defaultDark == "dark" ? true : false
+        defaultDark == "light" ? true : false
     );
 
     if (defaultDark) {
         setDark();
     } 
-
     
   const toggleTheme = (e) => {
     if (!darkTheme) {

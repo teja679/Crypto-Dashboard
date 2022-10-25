@@ -57,8 +57,6 @@
     .headings-div {
         margin: 0;
     }
-
-    
     .image-div {
         position: relative;
         margin: auto;
@@ -74,5 +72,22 @@
         width: 16rem;
         right: 1rem;
     }
+}
 
+@media only screen and (max-width: 600px) {
+    
+    .headings{
+        font-size: 2rem;
+    }
+    .phone {
+        width: 18rem;
+        top: 6rem;
+        right: 0rem;
+    }
+    .gradient{
+        position: absolute;
+        margin: auto;
+        width: 16rem;
+        right: 0;
+    }
 }

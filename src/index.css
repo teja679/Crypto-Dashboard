@@ -103,9 +103,9 @@ td {
   border-radius: 1rem;
 }
 .line-page-div {
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   margin: 1rem 3rem;
-  background-color: var(--darkgrey);
+  /* background-color: var(--darkgrey); */
   border-radius: 1rem;
 }
 
