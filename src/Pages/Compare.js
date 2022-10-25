@@ -13,7 +13,7 @@ import LineChart from "../Components/mui_components/LineChart/LineChart";
 import { getPriorDate } from "../Components/functions/getPriorDate";
 import ColorToggleButton from "../Components/mui_components/Toggle/Toggle";
 import { SelectCoins } from "../Components/ComparePage/SelectCoins/SelectCoins";
-import { ListFlex } from "../Components/ComparePage/ListFlex/ListFlex";
+import ListFlex from "../Components/ComparePage/ListFlex/ListFlex";
 import { CompareGraph } from "../Components/ComparePage/CompareGraph/CompareGraph";
 
 function Compare() {

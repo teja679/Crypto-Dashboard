@@ -89,6 +89,10 @@ function CoinPage() {
     const prices_data = await getPrices(response_data.id, days, type);
     setPrices(prices_data);
     var dates = getDaysArray(priorDate, today);
+    
+    // console.log('priordate >>', priorDate)
+    // console.log('today >>', today)
+
     setChartData({
       labels: dates,
       datasets: [
@@ -97,7 +101,7 @@ function CoinPage() {
           borderWidth: 2,
           fill: false,
           tension: 0.25,
-          backgroundColor: "transparent",
+          backgroundColor: "#3480e9",
           borderColor: "#3a80e9",
           pointRadius: 0,
         },
@@ -123,15 +127,17 @@ function CoinPage() {
     const prices_data = await getPrices(data.id, event.target.value, type);
     setPrices(prices_data);
     const priorDate = getPriorDate(event.target.value);
+    console.log('priordate >>', priorDate)
+    console.log('today >>', today)
     var dates = getDaysArray(priorDate, today);
-    setChartData({
-      labels: dates,
-      datasets: [
-        {
-          data: prices_data?.map((data) => data[1]),
-        },
-      ],
-    });
+    // setChartData({
+    //   labels: dates,
+    //   datasets: [
+    //     {
+    //       data: prices_data?.map((data) => data[1]),
+    //     },
+    //   ],
+    // });
   };
 
   return (
@@ -157,7 +163,7 @@ function CoinPage() {
                  id={data.id}
                />
              </div>
-             {/* <LineChart chartData={chartData} options={options} /> */}
+             <LineChart chartData={chartData} options={options} />
            </div>
            <CoinPageDesc name={data.name} desc={data.description.en} />
          </>
