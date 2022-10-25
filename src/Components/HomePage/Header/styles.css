@@ -8,6 +8,7 @@
     position: sticky;
     background-color: var(--black);
     z-index: 100;
+    top: 0;
     border-bottom: 1px solid var(--grey);
 }
 .links-div {

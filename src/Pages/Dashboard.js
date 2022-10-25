@@ -6,8 +6,12 @@ import NorthRoundedIcon from "@mui/icons-material/NorthRounded";
 import Search from '../Components/DashboardPage/Search';
 import Loader from '../Components/mui_components/Loader/Loader';
 import PaginationComponent from '../Components/mui_components/PaginationComponent';
+import { motion, useScroll } from "framer-motion";
+import '../App.css'
 
 const Dashboard = () => {
+    const { scrollYProgress } = useScroll();
+
     const API_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true);
@@ -81,6 +85,8 @@ const Dashboard = () => {
             ) : (
                 <>
                     <Header />
+                <motion.div  className="progress-bar"
+                style={{ scaleX: scrollYProgress }} />
                     <Search handleChange={handleChange} />
                     <DashboardWrapper data={filteredCoins} />
                     {!search && <PaginationComponent page={page}

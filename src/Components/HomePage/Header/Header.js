@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Button from '../../mui_components/Button/Button'
 import './styles.css'
 import TemporaryDrawer from './Drawer';
-import Search from '../../DashboardPage/Search';
 import { Switch } from '@mui/material';
 
 const Header = () => {
