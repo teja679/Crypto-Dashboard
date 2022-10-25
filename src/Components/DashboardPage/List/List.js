@@ -16,7 +16,7 @@ function List({ coin, delay }) {
         !volume.toString().includes("K"))
     ) {
       setVolume(convertNumbers(volume));
-      console.log("converted Volume>>>>", convertNumbers(volume));
+      // console.log("converted Volume>>>>", convertNumbers(volume));
     }
   }, []);
 

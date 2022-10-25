@@ -9,7 +9,7 @@ import Grid from "../Grid/Grid";
 import List from "../List/List";
 function DashboardWrapper({ data }) {
   const [value, setValue] = React.useState(0);
-  console.log(data)
+  // console.log(data)
   const style = {
     color: "var(--white)",
     width: "50vw",

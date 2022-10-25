@@ -4,7 +4,10 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+  .tab-list {
+    display: flex;
+    justify-content: center;
+  }
   .grid-flex {
     display: flex;
     width: 100%;
