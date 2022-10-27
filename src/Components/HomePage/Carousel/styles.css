@@ -1,10 +1,11 @@
 .carousel-div{
-    /* width: 53rem; */
     margin-left: 0;
     margin-top: 2rem;
     text-align: center;
-    /* display: flex; */
     align-items: center;
+}
+.each-slide {
+    text-align: center;
 }
 .each-image{
     width: 10rem;

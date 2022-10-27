@@ -15,11 +15,11 @@ const Header = ({ status, setStatus }) => {
         document.documentElement.setAttribute("data-theme", "light")
     }
     const storedTheme = localStorage.getItem("theme");
-    
+
     const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: light").matches
-    
+
     const defaultDark =
-    storedTheme === "dark" || (storedTheme === null && prefersDark);
+        storedTheme === "dark" || (storedTheme === null && prefersDark);
 
     const [darkTheme, setDarkTheme] = useState(
         defaultDark == "light" ? true : false
@@ -27,22 +27,21 @@ const Header = ({ status, setStatus }) => {
 
     if (defaultDark) {
         setDark();
-    } 
-    
-  const toggleTheme = (e) => {
-    if (!darkTheme) {
-      setDark();
-    } else {
-      setLight();
     }
-    setDarkTheme(!darkTheme);
-  };
+
+    const toggleTheme = (e) => {
+        if (!darkTheme) {
+            setDark();
+        } else {
+            setLight();
+        }
+        setDarkTheme(!darkTheme);
+    };
     return (
         <div className='navbar'>
             <a href='/'>
-                <motion.h1 
-                animate={{scale: [1, 2, 2, 1, 1],
-                    rotate: [0, 30, 0, -30, 0],}}
+                <motion.h1
+                    animate={{ rotate: [5, -5, 5, 0], }}
                 >Crypto Dashboard.</motion.h1>
             </a>
             <div className='links-div'>
@@ -51,21 +50,30 @@ const Header = ({ status, setStatus }) => {
                     value={!darkTheme}
                     onClick={() => toggleTheme()}
                 />
-                <a href='/'>
+                <motion.a whileHover={{
+                    scale: 1.2,
+                    transition: { duration: 1 },
+                }}
+                    whileTap={{ scale: 0.9 }} href='/'>
                     <p className='links'>Home</p>
-                </a>
+                </motion.a>
                 <p className='links' onClick={() => setStatus(!status)}>Search</p>
-                <a href='/compare'>
+                <motion.a whileHover={{
+                    scale: 1.2,
+                    transition: { duration: 1 },
+                }}
+                    whileTap={{ scale: 0.9 }} href='/compare'>
                     <p className='links'>Compare</p>
-                </a>
-                <a href='/about'>
-                    <p className='links'>About Us</p>
-                </a>
-                <a href='/dashboard'>
+                </motion.a>
+                <motion.a whileHover={{
+                    scale: 1.2,
+                    transition: { duration: 1 },
+                }}
+                    whileTap={{ scale: 0.9 }} href='/dashboard'>
                     <p className='links'>
                         <Button text={'Dashboard'} className={'button'} />
                     </p>
-                </a>
+                </motion.a>
             </div>
             <div className='menu-div'>
                 <TemporaryDrawer />

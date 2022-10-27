@@ -14,7 +14,7 @@
 }
 .button-wrapper:hover {
     transform: scale(1.1);
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
 }
 .outline-button-wrapper {
     background-color: var(--black);
@@ -29,7 +29,7 @@
 }
 .outline-button-wrapper:hover {
     transform: scale(1.1);
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
 }
 .outline-button-wrapper p {
     color: var(--blue);

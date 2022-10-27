@@ -46,6 +46,7 @@ const CarouselComp = () => {
                         <img src={slide.image} alt='slide'
                            className="each-image"
                         />
+                        <p>{slide.name}</p>
                     </div>
                 ))}
             </Carousel>
