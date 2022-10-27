@@ -3,6 +3,7 @@ import Button from '../../mui_components/Button/Button'
 import './styles.css'
 import TemporaryDrawer from './Drawer';
 import { Switch } from '@mui/material';
+import { motion } from "framer-motion"
 
 const Header = ({ status, setStatus }) => {
     const setDark = () => {
@@ -39,7 +40,10 @@ const Header = ({ status, setStatus }) => {
     return (
         <div className='navbar'>
             <a href='/'>
-                <h1>Crypto Dashboard.</h1>
+                <motion.h1 
+                animate={{scale: [1, 2, 2, 1, 1],
+                    rotate: [0, 30, 0, -30, 0],}}
+                >Crypto Dashboard.</motion.h1>
             </a>
             <div className='links-div'>
                 <Switch
