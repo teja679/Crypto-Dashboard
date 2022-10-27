@@ -140,6 +140,12 @@ function CoinPage() {
       datasets: [
         {
           data: prices_data?.map((data) => data[1]),
+          borderWidth: 2,
+          fill: false,
+          tension: 0.25,
+          backgroundColor: "#3480e9",
+          borderColor: "#3a80e9",
+          pointRadius: 0,
         },
       ],
     });

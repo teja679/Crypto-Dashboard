@@ -34,7 +34,7 @@ export default function ColorToggleButton({
             borderWidth: 2,
             fill: false,
             tension: 0.25,
-            backgroundColor: "transparent",
+            backgroundColor: "#3a80e9",
             borderColor: "#3a80e9",
             pointRadius: 0,
             yAxisID: "y",
@@ -45,7 +45,7 @@ export default function ColorToggleButton({
             borderWidth: 2,
             fill: false,
             tension: 0.25,
-            backgroundColor: "transparent",
+            backgroundColor: "#3a80e9",
             borderColor: "#61c96f",
             pointRadius: 0,
             yAxisID: "y1",
@@ -58,7 +58,15 @@ export default function ColorToggleButton({
         labels: dates,
         datasets: [
           {
+            label: id,
             data: prices_data?.map((data) => data[1]),
+            borderWidth: 2,
+            fill: false,
+            tension: 0.25,
+            backgroundColor: "#3a80e9",
+            borderColor: "#3a80e9",
+            pointRadius: 0,
+            yAxisID: "y",
           },
         ],
       });
