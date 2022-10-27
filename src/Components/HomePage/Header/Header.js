@@ -76,7 +76,7 @@ const Header = ({ status, setStatus }) => {
                 </motion.a>
             </div>
             <div className='menu-div'>
-                <TemporaryDrawer />
+                <TemporaryDrawer darkTheme={darkTheme} toggleTheme={toggleTheme} status={status} setStatus={setStatus}/>
             </div>
         </div>
     )
