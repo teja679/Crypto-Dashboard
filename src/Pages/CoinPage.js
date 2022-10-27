@@ -15,6 +15,8 @@ import { getPriorDate } from "../Components/functions/getPriorDate";
 import ColorToggleButton from "../Components/mui_components/Toggle/Toggle";
 
 function CoinPage() {
+  const [highPrice, setHighPrice] = useState()
+  const [lowPrice, setLowPrice] = useState()
   const [searchParams] = useSearchParams();
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -83,16 +85,12 @@ function CoinPage() {
   };
 
   const getData = async () => {
-    // console.log(searchParams)
     const response_data = await getCoinData(searchParams, true);
     setData(response_data);
     const prices_data = await getPrices(response_data.id, days, type);
     setPrices(prices_data);
     var dates = getDaysArray(priorDate, today);
-    
-    // console.log('priordate >>', priorDate)
-    // console.log('today >>', today)
-
+    console.log(response_data)
     setChartData({
       labels: dates,
       datasets: [
@@ -109,6 +107,12 @@ function CoinPage() {
     });
     setLoadingChart(false);
     setLoading(false);
+    // setHighPrice(response_data.market_data.high_24h.usd)
+    // setLowPrice(response_data.market_data.low_24h.usd)
+    // console.log(highPrice)
+    // console.log(response_data.market_data.high_24h.usd)
+    // console.log(coin.name)
+
     setCoin({
       id: response_data.id,
       name: response_data.name,
@@ -119,16 +123,16 @@ function CoinPage() {
       total_volume: response_data.market_data.total_volume.usd,
       current_price: response_data.market_data.current_price.usd,
       market_cap: response_data.market_data.market_cap.usd,
+      high_24h: response_data.market_data.high_24h.usd,
     });
   };
+  
 
   const handleChange = async (event) => {
     setDays(event.target.value);
     const prices_data = await getPrices(data.id, event.target.value, type);
     setPrices(prices_data);
     const priorDate = getPriorDate(event.target.value);
-    // console.log('priordate >>', priorDate)
-    // console.log('today >>', today)
     var dates = getDaysArray(priorDate, today);
     setChartData({
       labels: dates,
@@ -149,10 +153,16 @@ function CoinPage() {
            <Header />
            <CoinPageList coin={coin} delay={2} />
            <div className="coin-page-div">
-             <p style={{ margin: 0 }}>
-               Price Change in the last
-               <SelectDays days={days} handleChange={handleChange} />
-             </p>
+            <div className="data-div">
+              <p style={{ margin: 0 }}>
+                Price Change in the last
+                <SelectDays days={days} handleChange={handleChange} />
+              </p>
+              <div className="data">
+                <p>24h_High: {highPrice.market_data}</p> 
+                <p>24h_Low: {lowPrice.market_data}</p>
+              </div>
+            </div>
              <div className="toggle-flex">
                <ColorToggleButton
                  type={type}

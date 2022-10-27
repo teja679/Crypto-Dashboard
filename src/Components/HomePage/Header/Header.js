@@ -41,7 +41,7 @@ const Header = ({ status, setStatus }) => {
         <div className='navbar'>
             <a href='/'>
                 <motion.h1
-                    animate={{ rotate: [5, -5, 5, 0], }}
+                    animate={{ rotate: [2, -2, 2, 0], }}
                 >Crypto Dashboard.</motion.h1>
             </a>
             <div className='links-div'>

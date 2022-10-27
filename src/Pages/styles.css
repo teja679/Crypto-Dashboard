@@ -1,3 +1,8 @@
 .home-div {
     height: 100vh;
 }
+.data-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
