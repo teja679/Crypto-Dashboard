@@ -5,7 +5,7 @@ import TemporaryDrawer from './Drawer';
 import { Switch } from '@mui/material';
 import { motion } from "framer-motion"
 
-const Header = ({ status, setStatus }) => {
+const Header = ({ status, setStatus, searchStatus }) => {
     const setDark = () => {
         localStorage.setItem("theme", "dark");
         document.documentElement.setAttribute("data-theme", "dark")
@@ -57,7 +57,7 @@ const Header = ({ status, setStatus }) => {
                     whileTap={{ scale: 0.9 }} href='/'>
                     <p className='links'>Home</p>
                 </motion.a>
-                <p className='links' onClick={() => setStatus(!status)}>Search</p>
+                {searchStatus && <p className='links' onClick={() => setStatus(!status)}>Search</p>}
                 <motion.a whileHover={{
                     scale: 1.2,
                     transition: { duration: 1 },

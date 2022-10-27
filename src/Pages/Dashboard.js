@@ -12,6 +12,7 @@ import '../App.css'
 const Dashboard = () => {
     const { scrollYProgress } = useScroll();
     const [status, setStatus] = useState(true)
+    const searchStatus = true;
     const API_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true);
@@ -42,15 +43,15 @@ const Dashboard = () => {
         setFilteredCoins(data.slice((value - 1) * 12, (value - 1) * 12 + 12));
         console.log("filteredCoins", filteredCoins);
         topFunction();
-      };
-    
+    };
+
     useEffect(() => {
         axios.get(API_URL, { crossDomain: true }).then((res) => {
             if (res.data) {
                 // console.log(res.data);
                 setData(res.data);
                 setFilteredCoins(
-                  res.data.slice((page - 1) * 12, (page - 1) * 12 + 12)
+                    res.data.slice((page - 1) * 12, (page - 1) * 12 + 12)
                 );
                 setLoading(false)
             } else {
@@ -84,13 +85,13 @@ const Dashboard = () => {
                 <Loader />
             ) : (
                 <>
-                    <Header status={status} setStatus={setStatus}/>
-                <motion.div  className="progress-bar"
-                style={{ scaleX: scrollYProgress }} />
+                    <Header status={status} setStatus={setStatus} searchStatus={searchStatus} />
+                    <motion.div className="progress-bar"
+                        style={{ scaleX: scrollYProgress }} />
                     <Search handleChange={handleChange} status={status} />
                     <DashboardWrapper data={filteredCoins} />
                     {!search && <PaginationComponent page={page}
-                    handlePageChange={handlePageChange} />}
+                        handlePageChange={handlePageChange} />}
                     <NorthRoundedIcon
                         className="top-button"
                         id="top-button"
