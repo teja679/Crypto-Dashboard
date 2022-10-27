@@ -42,7 +42,7 @@ const Header = ({ status, setStatus, searchStatus }) => {
             <a href='/'>
                 <motion.h1
                     animate={{ rotate: [2, -2, 2, 0], }}
-                >Crypto Dashboard.</motion.h1>
+                >Crypto Dashboard<span style={{color:'var(--blue'}}>.</span></motion.h1>
             </a>
             <div className='links-div'>
                 <Switch
