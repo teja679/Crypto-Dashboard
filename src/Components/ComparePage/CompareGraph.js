@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Bar } from 'react-chartjs-2';
 import { convertNumbers } from '../functions/convertNumbers';
 import { getDaysArray } from '../functions/getDaysArray';
 import { getPrices } from '../functions/getPrices';
@@ -9,7 +10,7 @@ import './styles.css'
 export const CompareGraph = ({ crypto1, crypto2, days, type, setType }) => {
   const [prices1, setPrices1] = useState([]);
   const [prices2, setPrices2] = useState([]);
-
+  const [graph, setGraph] = useState(true)
   const today = new Date();
   const priorDate = new Date(new Date().setDate(today.getDate() - days));
 
@@ -106,7 +107,7 @@ export const CompareGraph = ({ crypto1, crypto2, days, type, setType }) => {
           borderWidth: 2,
           fill: false,
           tension: 0.25,
-          backgroundColor: "transparent",
+          backgroundColor: "#3a80e9",
           borderColor: "#3a80e9",
           pointRadius: 0,
           yAxisID: "y",
@@ -117,7 +118,7 @@ export const CompareGraph = ({ crypto1, crypto2, days, type, setType }) => {
           borderWidth: 2,
           fill: false,
           tension: 0.25,
-          backgroundColor: "transparent",
+          backgroundColor: "#61c96f",
           borderColor: "#61c96f",
           pointRadius: 0,
           yAxisID: "y1",
@@ -136,9 +137,13 @@ export const CompareGraph = ({ crypto1, crypto2, days, type, setType }) => {
           setChartData={setChartData}
           id={crypto1}
           id2={crypto2}
-        />
+        /> 
+        <button className='graphBtn' onClick={(() => setGraph(!graph))}>{graph ? 'Line Graph' : 'Bar Graph'}</button>
       </div>
-      <LineChart chartData={chartData} options={options} />
+      {graph ?
+      <LineChart chartData={chartData} options={options} /> :
+      <Bar data={chartData} options={options} />
+      }
     </div>
   )
 }

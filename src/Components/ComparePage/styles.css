@@ -15,6 +15,19 @@
 .coin-page-div:hover {
     border: 1px solid var(--white);
 }
+.toggle-flex {
+  display: flex;
+  justify-content: space-around;
+}
+.graphBtn {
+  font-size: 1.5rem;
+  width: fit-content;
+  border-radius: 0.5rem;
+  border: 1px solid var(--black);
+  color: white;
+  background-color: var(--blue);
+  padding: 0.5rem 1.5rem;
+}
   .text-select {
     display: flex;
     justify-content: flex-start;
