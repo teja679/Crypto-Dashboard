@@ -21,7 +21,7 @@ function Grid({ coin, delay }) {
             <p className="name">{coin.name}</p>
           </div>
         </div>
-        <div className="data-div">
+        <div className="resData-div">
           {coin.price_change_percentage_24h > 0 ? (
             <div className="chip-flex">
               <div

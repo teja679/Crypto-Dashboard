@@ -90,7 +90,7 @@ function CoinPage() {
     const prices_data = await getPrices(response_data.id, days, type);
     setPrices(prices_data);
     var dates = getDaysArray(priorDate, today);
-    console.log(response_data)
+
     setChartData({
       labels: dates,
       datasets: [
@@ -107,10 +107,11 @@ function CoinPage() {
     });
     setLoadingChart(false);
     setLoading(false);
-    // setHighPrice(response_data.market_data.high_24h.usd)
-    // setLowPrice(response_data.market_data.low_24h.usd)
+    setHighPrice(response_data.market_data.high_24h.usd)
+    setLowPrice(response_data.market_data.low_24h.usd)
     // console.log(highPrice)
-    // console.log(response_data.market_data.high_24h.usd)
+    console.log(response_data.market_data.high_24h.usd)
+    console.log(response_data.market_data.low_24h.usd)
     // console.log(coin.name)
 
     setCoin({
@@ -123,8 +124,8 @@ function CoinPage() {
       total_volume: response_data.market_data.total_volume.usd,
       current_price: response_data.market_data.current_price.usd,
       market_cap: response_data.market_data.market_cap.usd,
-      high_24h: response_data.market_data.high_24h.usd,
     });
+    console.log(response_data)
   };
   
 
@@ -159,8 +160,8 @@ function CoinPage() {
                 <SelectDays days={days} handleChange={handleChange} />
               </p>
               <div className="data">
-                <p>24h_High: {highPrice.market_data}</p> 
-                <p>24h_Low: {lowPrice.market_data}</p>
+                <p>24h High: <span>{highPrice.toFixed(2)}</span> </p> 
+                <p> 24h Low : <span>{lowPrice.toFixed(2)}</span></p>
               </div>
             </div>
              <div className="toggle-flex">
