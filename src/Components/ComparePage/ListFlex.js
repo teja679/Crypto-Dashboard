@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import CoinPageList from '../../CoinPageComponents/CoinPageList';
-import { getCoinData } from '../../functions/getCoinData';
-import Loader from '../../mui_components/Loader/Loader';
+import CoinPageList from '../CoinPageComponents/CoinPageList';
+import { getCoinData } from '../functions/getCoinData';
+import Loader from '../mui_components/Loader/Loader';
 
 function ListFlex({ crypto1, crypto2, setCrypto1Desc, setCrypto2Desc }) {
     const [coin1, setCoin1] = useState({});

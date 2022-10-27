@@ -1,8 +1,9 @@
 import React from "react";
 import "./styles.css";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
-function Search({ handleChange }) {
+function Search({ handleChange, status }) {
   return (
+    status && 
     <div className="search-wrapper">
       <div className="search-input">
         <SearchRoundedIcon sx={{ color: "var(--grey)" }} />

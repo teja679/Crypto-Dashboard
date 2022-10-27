@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { convertNumbers } from '../../functions/convertNumbers';
-import { getDaysArray } from '../../functions/getDaysArray';
-import { getPrices } from '../../functions/getPrices';
-import LineChart from '../../mui_components/LineChart/LineChart';
-import ColorToggleButton from '../../mui_components/Toggle/Toggle'
+import { convertNumbers } from '../functions/convertNumbers';
+import { getDaysArray } from '../functions/getDaysArray';
+import { getPrices } from '../functions/getPrices';
+import LineChart from '../mui_components/LineChart/LineChart';
+import ColorToggleButton from '../mui_components/Toggle/Toggle'
+import './styles.css'
 
 export const CompareGraph = ({ crypto1, crypto2, days, type, setType }) => {
-    const [prices1, setPrices1] = useState([]);
-      const [prices2, setPrices2] = useState([]);
+  const [prices1, setPrices1] = useState([]);
+  const [prices2, setPrices2] = useState([]);
 
   const today = new Date();
   const priorDate = new Date(new Date().setDate(today.getDate() - days));
@@ -38,17 +39,17 @@ export const CompareGraph = ({ crypto1, crypto2, days, type, setType }) => {
         ticks:
           type == "market_caps"
             ? {
-                callback: function (value) {
-                  return "$" + convertNumbers(value);
-                },
-              }
+              callback: function (value) {
+                return "$" + convertNumbers(value);
+              },
+            }
             : type == "total_volumes"
-            ? {
+              ? {
                 callback: function (value) {
                   return convertNumbers(value);
                 },
               }
-            : {
+              : {
                 callback: function (value, index, ticks) {
                   return "$" + value.toLocaleString();
                 },
@@ -64,17 +65,17 @@ export const CompareGraph = ({ crypto1, crypto2, days, type, setType }) => {
         ticks:
           type == "market_caps"
             ? {
-                callback: function (value) {
-                  return "$" + convertNumbers(value);
-                },
-              }
+              callback: function (value) {
+                return "$" + convertNumbers(value);
+              },
+            }
             : type == "total_volumes"
-            ? {
+              ? {
                 callback: function (value) {
                   return convertNumbers(value);
                 },
               }
-            : {
+              : {
                 callback: function (value, index, ticks) {
                   return "$" + value.toLocaleString();
                 },
@@ -89,7 +90,7 @@ export const CompareGraph = ({ crypto1, crypto2, days, type, setType }) => {
   useEffect(() => {
     getData();
   }, [crypto1, crypto2, days]);
-  
+
   const getData = async () => {
     const prices_data1 = await getPrices(crypto1, days, type);
     setPrices1(prices_data1);
@@ -124,20 +125,20 @@ export const CompareGraph = ({ crypto1, crypto2, days, type, setType }) => {
       ],
     });
   };
-    return (
+  return (
     <div className="coin-page-div">
-    <div className="toggle-flex">
-      <ColorToggleButton
-        type={type}
-        setType={setType}
-        days={days}
-        chartData={chartData}
-        setChartData={setChartData}
-        id={crypto1}
-        id2={crypto2}
-      />
+      <div className="toggle-flex">
+        <ColorToggleButton
+          type={type}
+          setType={setType}
+          days={days}
+          chartData={chartData}
+          setChartData={setChartData}
+          id={crypto1}
+          id2={crypto2}
+        />
+      </div>
+      <LineChart chartData={chartData} options={options} />
     </div>
-    <LineChart chartData={chartData} options={options} />
-  </div>
   )
 }

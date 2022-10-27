@@ -4,7 +4,7 @@ import './styles.css'
 import TemporaryDrawer from './Drawer';
 import { Switch } from '@mui/material';
 
-const Header = () => {
+const Header = ({ status, setStatus }) => {
     const setDark = () => {
         localStorage.setItem("theme", "dark");
         document.documentElement.setAttribute("data-theme", "dark")
@@ -50,6 +50,7 @@ const Header = () => {
                 <a href='/'>
                     <p className='links'>Home</p>
                 </a>
+                <p className='links' onClick={() => setStatus(!status)}>Search</p>
                 <a href='/compare'>
                     <p className='links'>Compare</p>
                 </a>

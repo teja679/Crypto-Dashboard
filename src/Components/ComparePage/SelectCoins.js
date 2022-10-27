@@ -1,9 +1,9 @@
 import axios from 'axios';
 import './styles.css'
 import React, { useEffect, useState } from 'react'
-import { COIN_GECKO_URL } from '../../../Constants';
-import SelectDays from '../../CoinPageComponents/SelectDays'
-import { SelectComponent } from '../Select/Select'
+import { COIN_GECKO_URL } from '../../Constants';
+import SelectDays from '../CoinPageComponents/SelectDays'
+import { SelectComponent } from './Select'
 
 export const SelectCoins = ({
     crypto1,

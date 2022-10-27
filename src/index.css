@@ -96,12 +96,6 @@ td {
   width: 18%;
 }
 
-.coin-page-div {
-  padding: 1rem;
-  margin: 1rem 3rem;
-  background-color: var(--darkgrey);
-  border-radius: 1rem;
-}
 .line-page-div {
   /* padding: 0 1rem; */
   margin: 1rem 3rem;

@@ -11,7 +11,7 @@ import '../App.css'
 
 const Dashboard = () => {
     const { scrollYProgress } = useScroll();
-
+    const [status, setStatus] = useState(true)
     const API_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true);
@@ -84,10 +84,10 @@ const Dashboard = () => {
                 <Loader />
             ) : (
                 <>
-                    <Header />
+                    <Header status={status} setStatus={setStatus}/>
                 <motion.div  className="progress-bar"
                 style={{ scaleX: scrollYProgress }} />
-                    <Search handleChange={handleChange} />
+                    <Search handleChange={handleChange} status={status} />
                     <DashboardWrapper data={filteredCoins} />
                     {!search && <PaginationComponent page={page}
                     handlePageChange={handlePageChange} />}

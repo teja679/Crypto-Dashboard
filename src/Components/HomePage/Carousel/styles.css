@@ -1,0 +1,8 @@
+.carousel-div{
+    height: 15rem;
+    width: 52rem;
+    margin-top: 2rem;
+    text-align: center;
+    /* display: flex; */
+    align-items: center;
+}

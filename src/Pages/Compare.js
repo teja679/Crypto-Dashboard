@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import CoinPageDesc from "../Components/CoinPageComponents/CoinPageDesc";
 import Header from "../Components/HomePage/Header/Header";
-import { SelectCoins } from "../Components/ComparePage/SelectCoins/SelectCoins";
-import ListFlex from "../Components/ComparePage/ListFlex/ListFlex";
-import { CompareGraph } from "../Components/ComparePage/CompareGraph/CompareGraph";
+import { SelectCoins } from "../Components/ComparePage/SelectCoins";
+import ListFlex from "../Components/ComparePage/ListFlex";
+import { CompareGraph } from "../Components/ComparePage/CompareGraph";
 
 function Compare() {
     const [crypto1, setCrypto1] = useState('bitcoin')

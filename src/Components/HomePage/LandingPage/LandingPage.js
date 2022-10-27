@@ -5,6 +5,9 @@ import Button from '../../mui_components/Button/Button'
 import './styles.css'
 import { RWebShare } from "react-web-share";
 import { motion } from 'framer-motion'
+import { SlideShow } from '../SlideShow/SlideShow'
+import CarouselComp from '../Carousel/CarouselComp'
+
 
 const LandingPage = () => {
   return (
@@ -32,6 +35,9 @@ const LandingPage = () => {
             <Button text={'Share'} className={'outline-button'} />
           </RWebShare>
         </div>
+        
+      {/* <SlideShow /> */}
+      <CarouselComp />
       </div>
       <div className='image-div'>
         <img src={gradient} alt='gradient' className='gradient' />

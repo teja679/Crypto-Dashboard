@@ -3,6 +3,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1rem;
   }
   .tab-list {
     display: flex;
@@ -12,8 +13,6 @@
     display: flex;
     width: 100%;
     padding-top: 1rem;
-    /* padding-left: 3rem;
-    padding-right: 3rem; */
     gap: 2rem;
     justify-content: center;
     align-items: center;
