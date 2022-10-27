@@ -28,6 +28,9 @@
   background-color: var(--darkgrey);
   padding: 0.5rem 1.5rem;
 }
+.graphBtn:hover {
+  cursor: pointer;
+}
   .text-select {
     display: flex;
     justify-content: flex-start;

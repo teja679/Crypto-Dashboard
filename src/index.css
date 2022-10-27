@@ -90,7 +90,9 @@ h6,
 p {
   color: var(--white);
 }
-
+button {
+  cursor: pointer;
+}
 td {
   text-align: left !important;
   width: 18%;
