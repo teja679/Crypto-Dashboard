@@ -3,6 +3,7 @@
     margin-top: 2rem;
     text-align: center;
     align-items: center;
+    position: relative;
 }
 .each-slide {
     text-align: center;

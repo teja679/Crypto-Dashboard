@@ -4,6 +4,7 @@
     display: flex;
     text-align: left;
     flex-wrap: nowrap;
+    position: relative;
 }
 .headings-div {
     width: 60%;
@@ -44,7 +45,9 @@
     position: absolute;
     width: 16rem;
 }
-
+.carousel-div {
+    padding-bottom: 2rem;
+}
 
 @media only screen and (max-width: 800px) {
     .landing-page{
