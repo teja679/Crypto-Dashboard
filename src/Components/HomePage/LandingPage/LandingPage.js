@@ -6,7 +6,6 @@ import './styles.css'
 import { RWebShare } from "react-web-share";
 import { motion } from 'framer-motion'
 import CarouselComp from '../Caroisel/CarouselComp'
-import Footer from '../Footer/Footer'
 
 const LandingPage = () => {
   return (
@@ -52,7 +51,6 @@ const LandingPage = () => {
           }}></motion.img>
       </div>
     </div>
-    <Footer />
     </>
   )
 }

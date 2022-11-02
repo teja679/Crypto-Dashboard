@@ -23,8 +23,7 @@ function App() {
   return (
     <>
       <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
-      <News />
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/dashboard' element={<Dashboard />} />
@@ -32,7 +31,7 @@ function App() {
           <Route path='/compare' element={<Compare />} />
           <Route path='/news' element={<News />} />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </>
   );
 }
