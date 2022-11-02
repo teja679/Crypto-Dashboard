@@ -5,7 +5,7 @@ import Button from '../../mui_components/Button/Button'
 import './styles.css'
 import { RWebShare } from "react-web-share";
 import { motion } from 'framer-motion'
-import CarouselComp from '../Caroisel/CarouselComp'
+import CarouselComp from '../Carousel/CarouselComp'
 
 const LandingPage = () => {
   return (

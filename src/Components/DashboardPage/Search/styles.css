@@ -12,21 +12,13 @@
   margin-left: auto;
   margin-right: auto;
   background-color: var(--darkgrey);
-  border-radius: 2rem;
-  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  padding: 0.2rem 2rem;
   color: var(--white);
 }
-
-.search-input input {
-  width: 100%;
-  background-color: var(--darkgrey);
-  border: 0px;
+.search-input::placeholder {
   color: var(--white);
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
 }
-
 .search-input input:focus {
   outline: none;
 }

@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+Initial Setup - 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+0. Made Root Variables and added fonts using Google fonts.
+1. Custom scroll Bar
+2. Custom selection.
+3. Disabling Image dragging.
 
-## Available Scripts
+Landing page - 
 
-In the project directory, you can run:
+4. Header - Mui Drawer.
+5. Text Stroke Hover animation - landing page.
+6. Framer Motion - The animation for phone and entrance animation for text.
 
-### `npm start`
+Dashboard page - 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+7. Mui Tab component - for dashboard tabs (custom themed)
+8. Get data from Coingecko api. 
+9. ToLocaleString() - adds commas to numbers and ToFixed(2) - adds 2 decimal places
+10. Converting numbers to K,M,B - custom function
+11. Search functionality - accomplished using .filter()
+12. Added a delay in the animations for our Grid and List component.
+13. Pagination Mui - slicing the data in correspondence to the page number
+14. Wrote a js function to take us to the top of the page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Coin page - 
 
-### `npm test`
+15. Used router params to get the id of the bitcoin
+16. Used bitcoin id - to get the coins data, and prices for x number of days.
+17. Used react-chartjs-2 to make the graphs.
+18. Made a function to get the array of dates in x number of days.
+19. Used Mui Select to get the number of days, and had a function to get prices accordingly.
+20. Mui Toggle buttons for getting prices,mkt_cap,volume values.
+21. Used dangerouslySetInnerHTML attribute to render a string having html tags in it.
+22. Made a Loading component to make sure all the data was there, before rendering the components.
+23. Made a custom styled object to style Mui Components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Compare Page - 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+24. For the 2 simultaneous graphs, we made 2 y-axis and 2 datasets.
+25. Select component mui, having the list of 100 coins.
+26. Also since comparison of the same coin makes no sense, we made sure that both selects have every bitcoin other than the coin selected.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Light Mode Dark Mode - 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+27. Using local storage and data-theme variable in css
+28. Updating root variables according to the theme.
 
-### `npm run eject`
+Other features - 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+29. Using RWebShare npm package.
+30. Custom Mouse - 2 divs that follow the mouse (with delay)
+31. Mui icons
+32. Seo
