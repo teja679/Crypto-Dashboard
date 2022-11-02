@@ -28,8 +28,9 @@ const News = () => {
           {news.map((item, index) => (
             <div key={index} className='news-div' style={{ backgroundImage: `url(${item.urlToImage ? item.urlToImage : error404})` }}>
               <p key={index}>{item.source.name}</p>
+              <p className='hidden-page'>{item.title}</p>
               <a href={`${item.url}`}>
-                <button className='btn'>Know more</button>
+                 <button className='btn'>Know more</button>
               </a>
             </div>
           ))}
