@@ -10,7 +10,7 @@ const News = () => {
 
   useEffect(() => {
     const getNews = async () => {
-      const newsData = await axios.get(NEWS_API)
+      const newsData = await axios.get(NEWS_API, {crossDomain: true})
       setNews(newsData.data.articles)
       console.log(newsData.data.articles)
     }
