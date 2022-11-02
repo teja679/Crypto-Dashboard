@@ -10,11 +10,6 @@ function Search({ handleChange, status }) {
     <div className="search-wrapper">
       <div className="search-input">
         <SearchRoundedIcon sx={{ color: "var(--grey)" }} />
-        {/* <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-
-        /> */}
         <input type="text" placeholder="Search" onChange={handleChange} />
       </div>
     </div>

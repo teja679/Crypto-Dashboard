@@ -5,6 +5,7 @@ import Dashboard from './Pages/Dashboard';
 import CoinPage from './Pages/CoinPage';
 import Compare from './Pages/Compare';
 import { useEffect } from 'react';
+import News from './Pages/News';
 
 function App() {
 
@@ -22,15 +23,16 @@ function App() {
   return (
     <>
       <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
-
-      <BrowserRouter>
+      <News />
+      {/* <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/coin' element={<CoinPage />} />
           <Route path='/compare' element={<Compare />} />
+          <Route path='/news' element={<News />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   );
 }
