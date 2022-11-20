@@ -90,7 +90,7 @@ function CoinPage() {
     const prices_data = await getPrices(response_data.id, days, type);
     setPrices(prices_data);
     var dates = getDaysArray(priorDate, today);
-
+    // console.log(dates)
     setChartData({
       labels: dates,
       datasets: [
