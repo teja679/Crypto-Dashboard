@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    height: 10%;
+    height: 7vw;
     padding: 0 1rem;
     align-items: center;
     justify-content: space-between;
@@ -47,9 +47,12 @@
 
 @media only screen and (max-width: 800px) {
     .navbar {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        height: 8%;
+        padding: 1rem;
+        min-height: 4rem;
+        position: sticky;
+        background-color: var(--black);
+        z-index: 100;
+        top: 0;
     }
     .links-div {
         display: none;
