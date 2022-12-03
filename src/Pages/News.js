@@ -20,13 +20,14 @@ const News = () => {
     <>
       <Header />
       <div className='news-page-div'>
-        {/* <div className='news-heading'>
+        <div className='news-heading'>
           <NewspaperIcon />
-          <h2>News</h2>
-        </div> */}
+          {/* <h2>News</h2> */}
+        </div>
         <div className='news-page'>
           {news.map((item, index) => (
-            <div key={index} className='news-div' style={{ backgroundImage: `url(${item.urlToImage ? item.urlToImage : error404})` }}>
+            <div key={index} className='news-div' >
+              <img width='300px' height='200px' src={item?.urlToImage ? item.urlToImage : error404} alt='logo' />
               <p key={index}>{item.source.name}</p>
               <p className='hidden-page'>{item.title}</p>
               <a href={`${item.url}`}>

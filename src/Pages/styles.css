@@ -42,7 +42,7 @@
 .news-div:hover {
     opacity: 1.2;
 }.news-div:hover .hidden-page {
-    display: block;
+    /* display: block; */
 }
 .news-div p {
     font-size: 2rem;

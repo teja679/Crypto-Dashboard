@@ -19,7 +19,8 @@ const Dashboard = () => {
 	const [page, setPage] = useState(1)
 	const [search, setSearch] = useState("")
 	const [filteredCoins, setFilteredCoins] = useState([]);
-
+	const [sort, setSort] = useState('popularity');
+	console.log(sort)
 	useEffect(() => {
 		if (search) {
 			setFilteredCoins(
@@ -39,16 +40,14 @@ const Dashboard = () => {
 	};
 	const handlePageChange = (e, value) => {
 		setPage(value);
-		console.log("valueee", value);
 		setFilteredCoins(data.slice((value - 1) * 12, (value - 1) * 12 + 12));
-		console.log("filteredCoins", filteredCoins);
+		// console.log("filteredCoins", filteredCoins);
 		topFunction();
 	};
 
 	useEffect(() => {
 		axios.get(API_URL, { crossDomain: true }).then((res) => {
 			if (res.data) {
-				// console.log(res.data);
 				setData(res.data);
 				setFilteredCoins(
 					res.data.slice((page - 1) * 12, (page - 1) * 12 + 12)
@@ -59,6 +58,20 @@ const Dashboard = () => {
 			}
 		})
 	}, [])
+
+	
+	useEffect(() => {
+		if(sort === 'lowPrice'){
+			const sortedData = filteredCoins.sort(function(a, b){return a.current_price-b.current_price})
+			setFilteredCoins(sortedData)
+		}
+		if(sort === 'highPrice'){
+			const sortedData = filteredCoins.sort(function(a, b){return b.current_price-a.current_price})
+			setFilteredCoins(sortedData)
+		}
+		console.log(filteredCoins)
+	}, [sort])
+
 	let mybutton = document.getElementById("top-button");
 
 	window.onscroll = function () {
@@ -88,7 +101,7 @@ const Dashboard = () => {
 					<Header status={status} setStatus={setStatus} searchStatus={searchStatus} />
 					<motion.div className="progress-bar"
 						style={{ scaleX: scrollYProgress }} />
-					<AutoSearch status={status} setSearch={setSearch} handleChange={handleChange} data={data} />
+					<AutoSearch sort={sort} setSort={setSort} status={status} setSearch={setSearch} handleChange={handleChange} data={data} />
 					<DashboardWrapper data={filteredCoins} />
 					{!search && <PaginationComponent page={page}
 						handlePageChange={handlePageChange} />}
