@@ -5,7 +5,7 @@ import './styles.css'
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import error404 from '../assets/error404.png'
 import Header from '../Components/HomePage/Header/Header';
-const News = () => {
+const News = ({ header }) => {
   const [news, setNews] = useState([])
 
   useEffect(() => {
@@ -18,11 +18,11 @@ const News = () => {
   }, [])
   return (
     <>
-      <Header />
+      {!header && <Header />}
       <div className='news-page-div'>
         <div className='news-heading'>
           <NewspaperIcon />
-          {/* <h2>News</h2> */}
+          <h2>News</h2>
         </div>
         <div className='news-page'>
           {news.map((item, index) => (

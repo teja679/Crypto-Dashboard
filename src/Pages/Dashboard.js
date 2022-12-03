@@ -61,12 +61,20 @@ const Dashboard = () => {
 
 	
 	useEffect(() => {
-		if(sort === 'lowPrice'){
+		if(sort === 'highPrice'){
 			const sortedData = filteredCoins.sort(function(a, b){return a.current_price-b.current_price})
 			setFilteredCoins(sortedData)
 		}
-		if(sort === 'highPrice'){
+		if(sort === 'lowPrice'){
 			const sortedData = filteredCoins.sort(function(a, b){return b.current_price-a.current_price})
+			setFilteredCoins(sortedData)
+		}
+		if(sort === 'HighRisk'){
+			const sortedData = filteredCoins.sort(function(a, b){return b.price_change_percentage_24h-a.price_change_percentage_24h})
+			setFilteredCoins(sortedData)
+		}
+		if(sort === 'lowRisk'){
+			const sortedData = filteredCoins.sort(function(a, b){return b.price_change_percentage_24h-a.price_change_percentage_24h})
 			setFilteredCoins(sortedData)
 		}
 		console.log(filteredCoins)

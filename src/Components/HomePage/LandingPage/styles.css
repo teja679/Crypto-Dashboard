@@ -72,12 +72,13 @@
     .phone {
         /* position: absolute; */
         width: 18rem;
-        top: 6rem;
+        top: -4rem;
         right: 2rem;
     }
     .gradient{
         margin: auto;
         width: 16rem;
+        top: -2rem;
         right: 1rem;
     }
 }
@@ -89,14 +90,14 @@
     }
     .phone {
         width: 18rem;
-        top: 3rem;
+        top: -4rem;
         right: 0rem;
     }
     .gradient{
         position: absolute;
         margin: auto;
         width: 16rem;
-        top: 3rem;
+        top: -2rem;
         right: 0;
     }
 }
