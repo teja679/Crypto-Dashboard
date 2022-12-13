@@ -20,10 +20,10 @@ const News = ({ header }) => {
     <>
       {!header && <Header />}
       <div className='news-page-div'>
-        <div className='news-heading'>
+        {/* <div className='news-heading'>
           <NewspaperIcon />
           <h2>News</h2>
-        </div>
+        </div> */}
         <div className='news-page'>
           {news.map((item, index) => (
             <div key={index} className='news-div' >

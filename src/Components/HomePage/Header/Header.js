@@ -77,13 +77,13 @@ const Header = ({ status, setStatus, searchStatus }) => {
         >
           <p className="links">Compare</p>
         </motion.a>
-        <motion.a whileHover={{
+        {/* <motion.a whileHover={{
 					scale: 1.2,
 					transition: { duration: 1 },
 				}}
 					whileTap={{ scale: 0.9 }} href='/news'>
 					<p className='links'>News</p>
-				</motion.a>
+				</motion.a> */}
         <motion.a
           whileHover={{
             scale: 1.2,

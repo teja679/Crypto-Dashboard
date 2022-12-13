@@ -29,7 +29,7 @@ function App() {
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/coin' element={<CoinPage />} />
           <Route path='/compare' element={<Compare />} />
-          <Route path='/news' element={<News />} />
+          {/* <Route path='/news' element={<News />} /> */}
         </Routes>
       </BrowserRouter>
     </>
